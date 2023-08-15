@@ -11,7 +11,10 @@ public class Analyzer {
 
     public static int[] analyze(String a, String b, String c) throws Exception {
 
-        if (Pattern.matches(("\\d"), a) && Pattern.matches(("\\d"), b)) {
+        if (Pattern.matches(("\\d"), a) && Pattern.matches(("\\d"), b) ||
+                Pattern.matches(("\\d"), a) && b.equals("10") ||
+                Pattern.matches(("\\d"), b) && a.equals("10") ||
+                a.equals("10") && b.equals("10")) {
             return new int[]{Integer.parseInt(a), Integer.parseInt(b)};
         }
         // операция для арабского и римского числа

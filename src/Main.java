@@ -4,7 +4,12 @@ import java.util.regex.Pattern;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        calc("1 / 9");
+
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        calc(s);
+        scanner.close();
+
     }
 
     public static String calc(String input) throws Exception {
